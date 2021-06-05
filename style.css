@@ -1,5 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: rgb(24, 24, 24);
+}
+
+header {
+  align-items: center;
+  display: flex;
+  height: 80px;
+  background-color: purple;
+  justify-content: center;
+  width: 100%;
+  box-shadow: 0 0 5px 5px rgba(255, 0, 255, 0.192);
+}
+
+#title {
+  font-size: 2.5rem;
+  color: whitesmoke;
+  text-transform: capitalize;
+}
+
+main {
+  background-color: rgba(245, 245, 245, 0.808);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+#show-score {
+  background-color: rgb(255, 238, 0);
+  padding: 5px;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 120px;
+  right: 60px;
+  border-radius: 8px;
+  color: rgb(24, 24, 24);
+}
+
+#color-target {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#rgb-color {
+  color: green;
+  
+}
+
 #color-options {
   display: flex;
+  margin: 10px;
+}
+
+#answer {
+  font-size: 1.5rem;
+  color: gray;
 }
 
 .ball {
@@ -8,4 +76,23 @@
   border-radius: 50%;
   cursor: pointer;
   margin: 5px;
+  border: 3px solid rgb(26, 26, 26);
+}
+
+#reset-game {
+  font-size: 1.3rem;
+  background-color: darkgreen;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: whitesmoke;
+  margin-top: 10px;
+}
+
+#answer .success {
+  color: darkgreen;
+}
+
+#answer .error {
+  color: darkred;
 }

@@ -72,9 +72,9 @@ const setScore = ({ reset = false } = {}) => {
 const checkGuess = (event) => {
   const guess = event.target;
   if (guess.style.backgroundColor !== `rgb${correctColor}`) {
-    answer.innerHTML = '<span>Errou! Tente novamente!</span>';
+    answer.innerHTML = '<span class="error">Errou! Tente novamente!</span>';
   } else {
-    answer.innerHTML = '<span>Acertou!</span>';
+    answer.innerHTML = '<span class="success">Acertou!</span>';
     setScore();
     setTimeout(() => resetGame(), 3000);
   }
