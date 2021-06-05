@@ -63,19 +63,20 @@ const resetGame = () => {
   generateColorOptions(6);
 };
 
-const setScore = ({ reset = false } = {}) => {
+const setScore = (delta) => {
   let scrValue = parseInt(score.innerText, 10);
-  scrValue += 3;
-  score.innerText = reset ? 0 : scrValue;
+  scrValue += delta;
+  score.innerText = scrValue;
 };
 
 const checkGuess = (event) => {
   const guess = event.target;
   if (guess.style.backgroundColor !== `rgb${correctColor}`) {
     answer.innerHTML = '<span class="error">Errou! Tente novamente!</span>';
+    setScore(-1);
   } else {
     answer.innerHTML = '<span class="success">Acertou!</span>';
-    setScore();
+    setScore(3);
     setTimeout(() => resetGame(), 3000);
   }
 };
